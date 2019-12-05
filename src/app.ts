@@ -12,4 +12,4 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('*', indexRouter)
 
-module.exports = app
+app.listen('8080', () => console.log('L\'application tourne sur le port 8080'))
