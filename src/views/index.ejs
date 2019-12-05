@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr" dir="ltr">
   <head>
-    <title><%= title %></title>
+    <meta charset="utf-8">
+    <title>Le formulaire</title>
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="js/uikit.js" charset="utf-8"></script>
+    <script src="js/timeinc.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <div class="container">
+      <div class="box">
+
+        <table>
+          <tr>
+            <th>Date</th> <td><input class="uk-input" type="date" name="" value=""> </td>
+          </tr>
+
+          <tr>
+            <th>Heure: <span id="hourShow"></span></th>
+
+            <td>
+              <input class="uk-range" type="range" oninput="showVal(this.value);" onchange="showVal(this.value);" id="test5" min="30" max="330" step="1" />
+            </td>
+          </tr>
+
+          <tr>
+            <th>Durée</th><td>
+
+            <select class="uk-select" id="selectorTime">
+
+              <option value="" disabled selected>Ça prend combien de temps ?</option>
+              <option value="30">30m</option>
+              <option value="60">1h</option>
+              <option value="120">1h30</option>
+              <option value="150">2h</option>
+              <option value="180">2h30</option>
+              <option value="210">3h</option>
+              <option value="240">3h30</option>
+              <option value="270">4h</option>
+              <option value="300">4h30</option>
+              <option value="330">5h</option>
+            </select>
+
+          </td>
+          </tr>
+
+
+          <tr>
+            <th>MJ</th>
+            <td><input class="uk-input" type="text" placeholder="#Quelqu'un"></td>
+          </tr>
+
+          <tr>
+            <th>Système</th>
+            <td><input class="uk-input" type="text" placeholder="#Quelque chose"></td>
+          </tr>
+
+          <tr>
+            <th>Outils</th>
+            <td><input class="uk-input" type="text" placeholder="#Outils"></td>
+          </tr>
+
+          <tr>
+            <th>Champ libre</th>
+            <td><input class="uk-input" type="text" placeholder="#libérééééé délivréééee"></td>
+          </tr>
+
+          <tr>
+            <th></th>
+            <td><button class="uk-button uk-button-default">Valider</button></td>
+          </tr>
+
+          </table>
+
+      </div>
+
+
+    </div>
+
   </body>
 </html>
